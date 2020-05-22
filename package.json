@@ -18,13 +18,19 @@
   "scripts": {
     "type-check": "tsc --noEmit",
     "type-check:watch": "yarn type-check --watch",
-    "build": "yarn build:types && yarn build:js",
+    "build": "yarn cleanup && yarn build:types && yarn build:js",
+    "build2":"yarn cleanup && tsc",
     "build:types": "tsc --emitDeclarationOnly",
     "build:js": "babel src --out-dir dist --extensions \".ts,.tsx\" --source-maps inline",
+    "cleanup":"rm -rf dist",
     "prepublish": "yarn build"
   },
   "dependencies": {
-    "valine": "^1.4.14"
+    "valine": "^1.4.14",
+    "@types/react": "^16.9.35",
+    "@types/react-dom": "^16.9.8",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
   },
   "peerDependencies": {
     "gatsby": "^2.0.0"
@@ -34,6 +40,7 @@
     "@babel/core": "^7.9.6",
     "@babel/plugin-proposal-class-properties": "^7.8.3",
     "@babel/preset-env": "^7.9.6",
+    "@babel/preset-react": "^7.9.4",
     "@babel/preset-typescript": "^7.9.0",
     "babel-preset-gatsby-package": "^0.4.2",
     "typescript": "^3.9.3"

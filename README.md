@@ -118,7 +118,7 @@ Below is a quick reference of supported Valine Options, described in a TypeScrip
 
 `<Valine>` supports `style` and `className` props for component styling.
 
-The custom CSS styles & classes is applied to Valine's container element, i.e. on the same element with the `v` class. Custom classes will precede the `v` class.
+The custom CSS styles & classes is applied to the Valine's container element, i.e. to the same element with the `v` class. Custom classes will precede the `v` class.
 
 ## How To Contribute
 

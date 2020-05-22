@@ -1,5 +1,7 @@
 # gatsby-plugin-valine
 
+![CI](https://github.com/wizcas/gatsby-plugin-valine/workflows/CI/badge.svg)
+
 在 Gatsby 站点中嵌入[Valine 评论系统](https://valine.js.org)的插件。
 
 本插件支持 TypeScript（因为就是用 TypeScript 写的），目前仅支持 Gatsby v2。

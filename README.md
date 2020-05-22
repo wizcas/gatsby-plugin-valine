@@ -1,5 +1,7 @@
 # gatsby-plugin-valine
 
+![CI](https://github.com/wizcas/gatsby-plugin-valine/workflows/CI/badge.svg)
+
 A Gatsby plugin for embedding the [Valine comment system](https://valine.js.org/en).
 
 [中文文档](./README-zh.md)

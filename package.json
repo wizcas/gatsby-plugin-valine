@@ -1,0 +1,14 @@
+{
+  "name": "gatsby-plugin-valine",
+  "version": "1.0.0",
+  "description": "Provides an out-of-the-box component for Valine commenting system",
+  "main": "dist/index.js",
+  "types":"dist/index.d.ts",
+  "repository": "https://github.com/wizcas/gatsby-plugin-valine",
+  "author": "Wizcas",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "prepublish": "tsc"
+  }
+}

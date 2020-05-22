@@ -1,4 +1,5 @@
 import isEqual from 'lodash/isEqual'
+import merge from 'lodash/merge'
 import React from 'react'
 
 export interface ValineOptions {
@@ -75,7 +76,7 @@ export interface ValineOptions {
   requiredFields?: ['nick'] | ['nick', 'mail']
 }
 
-export type ValineProps = Omit<ValineOptions, 'el'> & { style?: React.CSSProperties; className?: string }
+export type ValineProps = Partial<Omit<ValineOptions, 'el'> & { style: React.CSSProperties; className: string }>
 
 /** 使用React包装的Valine评论组件 */
 export default class Valine extends React.PureComponent<ValineProps> {
@@ -107,10 +108,20 @@ export default class Valine extends React.PureComponent<ValineProps> {
   }
   private async _makeValine() {
     const RealValine = await (await import('valine')).default
-    console.log('valine props', this.props)
+    const localOptions = this.props
+    const globalOptions = window.valineOptions
+    const options = merge({}, globalOptions, localOptions)
+    delete options.el
     new RealValine({
+      ...options,
       el: this._containerRef.current,
-      ...this.props,
     })
+    window.valineOptions
+  }
+}
+
+declare global {
+  interface Window {
+    valineOptions: Partial<ValineOptions>
   }
 }

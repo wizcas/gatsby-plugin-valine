@@ -62,7 +62,7 @@ After installing the plugin, just import and add the `<Valine>` component wherev
 For example, if you want to add the comment feature below every blog post in a Gatsby site built upon the `gatsby-starter-blog`[https://www.gatsbyjs.org/starters/gatsbyjs/gatsby-starter-blog/] template, just add the following codes into `src/templates/blog-post.js`:
 
 ```js
-import Valine from 'gatsby-plugin-valine'
+import Valine from 'gatsby-plugin-valine' // import the module
 
 ...
 
@@ -71,6 +71,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
   return (
     <Layout location={location} title={siteTitle}>
       ...
+      <!--Adds Valine component at the end of the page-->
       <Valine appId="LEANCLOUD_APP_ID" appKey="LEANCLOUD_APP_KEY"/>
     </Layout>
   )

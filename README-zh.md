@@ -57,7 +57,7 @@
 
 插件安装好后，只需要在需要的页面中导入它并添加`<Valine>`组件标签即可。
 
-比如你希望在一个用`gatsby-starter-blog`模板创建的博客站点上加入评论功能，并将这个 Valine 评论显示在每个博客文章页面的底部，那么只需要在`src/templates/blog-post.js`文件中添加如下代码：
+比如你希望在一个用`gatsby-starter-blog`模板创建的博客站点上加入评论功能，并将 Valine 评论显示在每个博客文章页面的底部，那么只需要在`src/templates/blog-post.js`文件中添加如下代码：
 
 ```js
 import Valine from 'gatsby-plugin-valine' // 导入

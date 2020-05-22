@@ -3,12 +3,39 @@
   "version": "1.0.0",
   "description": "Provides an out-of-the-box component for Valine commenting system",
   "main": "dist/index.js",
-  "types":"dist/index.d.ts",
+  "types": "dist/index.d.ts",
   "repository": "https://github.com/wizcas/gatsby-plugin-valine",
   "author": "Wizcas",
   "license": "MIT",
   "private": false,
+  "keywords": [
+    "gatsby",
+    "gatsby-plugin",
+    "comment",
+    "valine",
+    "blog-comment"
+  ],
   "scripts": {
-    "prepublish": "tsc"
+    "type-check": "tsc --noEmit",
+    "type-check:watch": "yarn type-check --watch",
+    "build": "yarn build:types && yarn build:js",
+    "build:types": "tsc --emitDeclarationOnly",
+    "build:js": "babel src --out-dir dist --extensions \".ts,.tsx\" --source-maps inline",
+    "prepublish": "yarn build"
+  },
+  "dependencies": {
+    "valine": "^1.4.14"
+  },
+  "peerDependencies": {
+    "gatsby": "^2.0.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.6",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/preset-env": "^7.9.6",
+    "@babel/preset-typescript": "^7.9.0",
+    "babel-preset-gatsby-package": "^0.4.2",
+    "typescript": "^3.9.3"
   }
 }

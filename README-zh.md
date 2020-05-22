@@ -115,3 +115,25 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
 `<Valine>` 组件支持 `style` 和 `className` 两个属性，以便开发者进行 CSS 样式重写和定制。
 
 自定义的样式和 CSS 类名会被应用到`Valine`的容器 DOM 节点上，即拥有 CSS 类`v`的那个节点。自定义的类名会出现在`v`之前。
+
+## 贡献代码
+
+## How To Contribute
+
+1. Fork 并 Clone 该仓库
+2. 使用 **`yarn`** 安装依赖
+   ```shell
+   $ yarn
+   ```
+3. 项目提供了两个用于类型检查的脚本便于开发时使用，不过我觉得好像没啥用，反正我没用过 🤣
+
+   ```shell
+   $ yarn type-check
+
+   # or a watch version
+
+   $ yarn type-check:watch
+   ```
+
+4. 要在本地调试插件，首先在插件根目录下执行`yarn link`注册插件。然后在要测试的 Gatsby 项目中，使用`yarn link gatsby-plugin-valine`将注册后的本地插件关联为项目依赖。然后按普通的 Gatsby 开发流程正常调用就好了。
+5. 本项目使用`husky`提供了`pre-commit`的钩子，在提交前会整理代码格式并进行 lint 检查。因此若贡献代码请遵循提供的代码规范。

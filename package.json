@@ -4,8 +4,12 @@
   "description": "Provides an out-of-the-box component for Valine commenting system",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "author": "Wizcas Chen",
   "repository": "https://github.com/wizcas/gatsby-plugin-valine",
-  "author": "Wizcas",
+  "bugs": {
+    "email": "chen@0x1c.dev",
+    "url":"https://github.com/wizcas/gatsby-plugin-valine/issues"
+  },
   "license": "MIT",
   "private": false,
   "keywords": [

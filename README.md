@@ -116,3 +116,23 @@ Below is a quick reference of supported Valine Options, described in a TypeScrip
 `<Valine>` supports `style` and `className` props for component styling.
 
 The custom CSS styles & classes is applied to Valine's container element, i.e. on the same element with the `v` class. Custom classes will precede the `v` class.
+
+## How To Contribute
+
+1. Fork and clone the repository
+2. Install dependencies with **`yarn`**
+   ```shell
+   $ yarn
+   ```
+3. There are 2 utility scripts for type-checking during the development process, though I never used 🤣
+
+   ```shell
+   $ yarn type-check
+
+   # or a watch version
+
+   $ yarn type-check:watch
+   ```
+
+4. To test the plugin locally, first register it with `yarn link` in the plugin's root folder. After that, use `yarn link gatsby-plugin-valine` in a Gatsby project for linking the registered local version as the dependency.
+5. There is a pre-commit hook for code formatting & linting, so it is required to follow the provided coding convensions.

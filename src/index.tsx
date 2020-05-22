@@ -76,8 +76,9 @@ export interface ValineOptions {
   requiredFields?: ['nick'] | ['nick', 'mail']
 }
 
-export type ValineProps = Partial<Omit<ValineOptions, 'el'> & { style: React.CSSProperties; className: string }>
-
+export type ValineProps = Partial<
+  Omit<ValineOptions, 'el'> & React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement>
+>
 /** 使用React包装的Valine评论组件 */
 export default class Valine extends React.PureComponent<ValineProps> {
   private _containerRef: React.RefObject<HTMLDivElement>
@@ -99,8 +100,7 @@ export default class Valine extends React.PureComponent<ValineProps> {
     }
   }
   render() {
-    const { style, className } = this.props
-    return <div ref={this._containerRef} style={style} className={className} />
+    return <div ref={this._containerRef} {...this.props} />
   }
 
   private _checkAvailability(): boolean {

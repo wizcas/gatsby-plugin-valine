@@ -37,7 +37,7 @@
     "valine": "^1.4.14"
   },
   "peerDependencies": {
-    "gatsby": "^2.0.0"
+    "gatsby": "^2.0.0 || ^3.0.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.8.4",
